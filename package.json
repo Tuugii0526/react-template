@@ -1,0 +1,32 @@
+{
+	"name": "bun-react-template",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev:api": "bun --hot backend/server.ts",
+		"dev:web": "vite",
+		"build": "tsc -b && vite build",
+		"typecheck": "tsc -b",
+		"preview": "vite preview",
+		"lint": "biome check --write .",
+		"lint:ci": "biome check .",
+		"format": "biome format --write ."
+	},
+	"dependencies": {
+		"@tanstack/react-query": "^5.101.0",
+		"@tanstack/react-router": "^1.170.15",
+		"react": "^19",
+		"react-dom": "^19"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.1.2",
+		"@tanstack/react-router-devtools": "^1.167.0",
+		"@tanstack/router-plugin": "^1.168.18",
+		"@types/bun": "latest",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"@vitejs/plugin-react": "^6.0.2",
+		"vite": "^8.0.16"
+	}
+}
