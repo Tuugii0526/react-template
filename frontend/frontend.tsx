@@ -1,20 +1,16 @@
 /**
- * This file is the entry point for the React app, it sets up the root
- * element and renders the App component to the DOM.
+ * This file is the entry point for the React app. It mounts the App component
+ * to the #root element in index.html.
  *
- * It is included in `src/index.html`.
+ * React Fast Refresh (HMR) is provided automatically by @vitejs/plugin-react.
  */
 
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
 
-const elem = document.getElementById("root")!;
-const app = (
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
-
-// https://bun.com/docs/bundler/hot-reloading#import-meta-hot-data
-(import.meta.hot.data.root ??= createRoot(elem)).render(app);
