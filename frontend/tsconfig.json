@@ -6,6 +6,6 @@
 		"lib": ["ESNext", "DOM", "DOM.Iterable"],
 		"jsx": "react-jsx",
 		"types": ["react"],
-		"paths": { "@/*": ["./*"] }
+		"paths": { "@/*": ["./*"], "@api/*": ["../backend/src/*"] }
 	}
 }

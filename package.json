@@ -4,7 +4,8 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev:api": "bun --hot backend/server.ts",
+		"dev:api": "NODE_ENV=development bun --hot backend/src/index.ts",
+		"prod": "NODE_ENV=production bun backend/src/index.ts",
 		"dev:web": "vite",
 		"build": "tsc -b && vite build",
 		"typecheck": "tsc -b",
@@ -14,10 +15,14 @@
 		"format": "biome format --write ."
 	},
 	"dependencies": {
+		"@hono/swagger-ui": "^0.5.1",
+		"@hono/zod-openapi": "^1.1.4",
 		"@tanstack/react-query": "^5.101.0",
 		"@tanstack/react-router": "^1.170.15",
+		"hono": "^4.12.15",
 		"react": "^19",
-		"react-dom": "^19"
+		"react-dom": "^19",
+		"zod": "^4.1.12"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.2",
