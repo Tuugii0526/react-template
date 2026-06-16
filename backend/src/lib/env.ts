@@ -9,6 +9,9 @@ const Env = z.object({
 	NODE_ENV: z
 		.enum(["development", "production", "test"])
 		.default("development"),
+	// Provided by docker-compose (points at the `db` service). Optional for now —
+	// the backend does not query the database yet.
+	DATABASE_URL: z.string().optional(),
 });
 
 const result = Env.safeParse(process.env);
