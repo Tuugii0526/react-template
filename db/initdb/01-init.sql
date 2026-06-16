@@ -1,0 +1,4 @@
+-- Runs once, the first time the Postgres data volume is initialized.
+-- The database named by POSTGRES_DB already exists at this point.
+-- Add extensions, schemas, or seed data here, e.g.:
+--   CREATE EXTENSION IF NOT EXISTS "uuid-ossp";

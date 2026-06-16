@@ -1,0 +1,17 @@
+.git
+.github
+.claude
+.vscode
+.idea
+
+**/node_modules
+dist
+.tanstack
+**/*.tsbuildinfo
+
+.env
+.env.*
+!.env.example
+
+*.md
+*.log
