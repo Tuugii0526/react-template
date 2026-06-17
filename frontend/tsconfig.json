@@ -7,5 +7,9 @@
 		"jsx": "react-jsx",
 		"types": ["react"],
 		"paths": { "@/*": ["./*"], "@api/*": ["../backend/src/*"] }
-	}
+	},
+	// vite.config.ts uses Node APIs; it is type-checked by the Node/Bun project
+	// (backend/tsconfig.json) instead, so exclude it here to avoid double project
+	// membership.
+	"exclude": ["vite.config.ts"]
 }

@@ -10,4 +10,4 @@ export type Client = typeof client;
 export type { InferResponseType } from "hono/client";
 
 export default (...args: Parameters<typeof hc>): Client =>
-	hc<ApiRoutes>(...args);
+  hc<ApiRoutes>(...args);
