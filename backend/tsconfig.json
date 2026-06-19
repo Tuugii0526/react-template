@@ -1,10 +1,9 @@
 {
-	// Backend (Bun) + build tooling (vite.config.ts). Inherits no-DOM lib from base.
 	"extends": "../tsconfig.base.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "../node_modules/.tmp/tsconfig.node.tsbuildinfo",
 		"types": ["bun"],
 		"paths": { "@api/*": ["./src/*"] }
 	},
-	"include": ["**/*", "../frontend/vite.config.ts"]
+	"include": ["**/*"]
 }

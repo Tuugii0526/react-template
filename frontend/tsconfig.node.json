@@ -1,0 +1,8 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"tsBuildInfoFile": "../node_modules/.tmp/tsconfig.fe-node.tsbuildinfo",
+		"types": ["bun"]
+	},
+	"include": ["vite.config.ts"]
+}
