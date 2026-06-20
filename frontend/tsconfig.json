@@ -1,11 +1,7 @@
 {
-	// Frontend (browser). Sits next to the code it checks; includes all of frontend/ by default.
-	"extends": "../tsconfig.base.json",
-	"compilerOptions": {
-		"tsBuildInfoFile": "../node_modules/.tmp/tsconfig.app.tsbuildinfo",
-		"lib": ["ESNext", "DOM", "DOM.Iterable"],
-		"jsx": "react-jsx",
-		"types": ["react"],
-		"paths": { "@/*": ["./*"], "@api/*": ["../backend/src/*"] }
-	}
+	"files": [],
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	]
 }
